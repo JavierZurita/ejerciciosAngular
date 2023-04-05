@@ -47,8 +47,12 @@ export class WhackamoleComponent {
       }, 1000);
   }
 
-  sumaScore(){
-    this.score++;
+  sumaScore(i: number, j: number){
+
+    if(this.imageSrc[i][j] === this.urlMole){
+      this.imageSrc[i][j] = this.urlBase;
+      this.score++;
+    }
   }
 
   defaultBoard(){

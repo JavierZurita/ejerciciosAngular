@@ -9,8 +9,7 @@
 <div class="tablero">
    <div *ngFor="let fila of filasArray; let i = index" class="fila">
         <div *ngFor="let column of columnsArray; let j = index" class="col">
-            <!-- <img *ngIf="mole" src="{{urlMole}}" alt="" (click)="sumaScore()"> -->
-            <img src="{{imageSrc[i][j]}}" alt="">
+            <img src="{{imageSrc[i][j]}}" alt="" (click)="sumaScore(i,j)">
         </div>
    </div>
 </div>
