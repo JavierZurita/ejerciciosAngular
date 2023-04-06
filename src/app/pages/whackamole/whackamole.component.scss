@@ -1,5 +1,6 @@
 img{
     width: 150px;
+    height: 150px;
     padding-left: 10px;
     padding-top: 10px;
 }
@@ -9,9 +10,6 @@ img{
     .fila{
         display: flex;
         flex-direction: column;
-        width: 150px;
-        .col{
-            width: 150px;
-        }
+
     }
 }

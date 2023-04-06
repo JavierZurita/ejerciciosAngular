@@ -1,0 +1,40 @@
+
+.galery{
+    margin: 80px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 2px solid black;
+
+    img{
+        width: 80px ;
+    }
+}
+
+.question{
+    margin: 100px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 5px;
+    border: 2px solid black;
+
+        &__botones{
+            display: flex;
+            gap: 10px;
+        }
+    
+}
+
+.none{
+    
+}
+
+.nonTarget{
+    opacity: 0.2;
+}

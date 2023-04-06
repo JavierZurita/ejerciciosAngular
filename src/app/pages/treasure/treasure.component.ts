@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./treasure.component.scss']
 })
 export class TreasureComponent {
-  filas: number = 2;
-  columns: number = 2;
+  filas: number = 5;
+  columns: number = 5;
   tabla: boolean = false;
   imageSrc: string[][] = [];
   filasArray: any[] = [];
@@ -37,11 +37,9 @@ export class TreasureComponent {
 
   voltearImagen(fila: number, columna: number) {
     
-    if (this.imageSrc[fila][columna] === "../../../assets/treasure/skull.png") {
-      this.imageSrc[fila][columna] = "../../../assets/treasure/x.png";
-    } else {
+    if (this.imageSrc[fila][columna] === "../../../assets/treasure/x.png") {
       this.imageSrc[fila][columna] = "../../../assets/treasure/skull.png";
-    } 
+    }
 
     if (this.Treasure[0] == fila && this.Treasure[1] == columna){
       this.imageSrc[fila][columna] = "../../../assets/treasure/chest.png";

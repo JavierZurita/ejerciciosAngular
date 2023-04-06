@@ -9,6 +9,8 @@ import { WhoiswhoComponent } from './pages/whoiswho/whoiswho.component';
 import { TreasureComponent } from './pages/treasure/treasure.component';
 import { WhackamoleComponent } from './pages/whackamole/whackamole.component';
 import { FormsModule } from '@angular/forms';
+import { PersonComponent } from './pages/whoiswho/person/person.component';
+import { QuestionComponent } from './pages/whoiswho/question/question.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     WhoiswhoComponent,
     TreasureComponent,
-    WhackamoleComponent
+    WhackamoleComponent,
+    PersonComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,
