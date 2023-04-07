@@ -8,9 +8,12 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 import { WhoiswhoComponent } from './pages/whoiswho/whoiswho.component';
 import { TreasureComponent } from './pages/treasure/treasure.component';
 import { WhackamoleComponent } from './pages/whackamole/whackamole.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PersonComponent } from './pages/whoiswho/person/person.component';
 import { QuestionComponent } from './pages/whoiswho/question/question.component';
+import { HttpClientModule } from '@angular/common/http';
+import { ExchangeComponent } from './pages/exchange/exchange.component';
+import { CurrencyComponent } from './pages/exchange/currency/currency.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +24,16 @@ import { QuestionComponent } from './pages/whoiswho/question/question.component'
     TreasureComponent,
     WhackamoleComponent,
     PersonComponent,
-    QuestionComponent
+    QuestionComponent,
+    ExchangeComponent,
+    CurrencyComponent
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,19 @@
+
+<div class="currency--info">
+    <div>
+        <h3>{{exchangesArray.base}}</h3> <!--SELECT-->
+        <select routerLink="/exchange/{{currencySel}}" [(ngModel)]="currencySel" (change)="updateData(currencySel)">
+            <ng-container *ngFor="let item of exchangesArray.rates | keyvalue">
+                <option value="{{item.key}}">{{item.key}}</option>
+            </ng-container>
+        </select>
+        <span>Introduzca la cantidad de {{exchangesArray.base}}: </span>
+        <input [(ngModel)]="coins" type="number" minlength="0" >
+    </div>
+</div>
+<div class="currency">
+    <div *ngFor="let currency of exchangesArray.rates | keyvalue" class="currencies__item">
+        <p>{{currency.key}} : {{currency.value}}</p>
+        <p>Valor al cambio: {{updateCurrency(currency.value)}}</p>
+    </div>
+</div>
