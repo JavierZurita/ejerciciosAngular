@@ -1,0 +1,32 @@
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
+        &--label{
+            display: flex;
+            justify-content: space-between;
+            gap: 2vh;
+        }
+        &--button{
+            max-width: 75px;
+        }
+    }
+
+    &__board{
+        display: flex;
+        justify-content: center;
+        &--table{
+            width: 75%;
+
+            img{
+                width: 15vw;
+                max-width: 100px;
+            }
+        }
+    }
+}

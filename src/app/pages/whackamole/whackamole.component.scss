@@ -1,15 +1,27 @@
-img{
-    width: 150px;
-    height: 150px;
-    padding-left: 10px;
-    padding-top: 10px;
-}
 
-.tablero{
+.game{
     display: flex;
-    .fila{
+    flex-direction: column;
+    align-items: center;
+    &__info{
         display: flex;
-        flex-direction: column;
-
+        gap: 5vw;
+        margin-bottom: 5vh;
     }
+    .tablero{
+    display: flex;
+
+        .fila{
+            display: flex;
+            flex-direction: column;
+                .image{
+                width: 20vw;
+                height: 20vw;
+                max-width: 150px;
+                max-height: 150px;
+                padding-right: 1vw;
+                padding-top: 1vw;
+            }
+        }
+    }   
 }

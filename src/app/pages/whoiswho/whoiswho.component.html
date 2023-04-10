@@ -1,23 +1,20 @@
-
-<div class="galery">
-    <div  *ngFor="let person of persons; let i = index">
-            <!-- <app-person [person]="person"> </app-person> -->
-            <img src="{{person.img}}" (click)="checkPerson(person)" [ngClass]="{'nonTarget': hiddenPersons.includes(person)}">
+<div class="game">    
+    <div class="galery">
+        <div  *ngFor="let person of persons; let i = index">
+                <!-- <app-person [person]="person"> </app-person> -->
+                <img src="{{person.img}}" (click)="checkPerson(person)" [ngClass]="{'nonTarget': hiddenPersons.includes(person)}">
+        </div>
     </div>
-</div>
-<div class="question">
-    <ng-container *ngFor="let question of questionsType">
-        <!-- <app-question [question]="question"></app-question> -->
-        <div>
-            <h3>{{question.title}}</h3>
-        </div>
-        <div class="question__botones">
-            <ng-container *ngFor="let item of question.questions">
-                <button (click)="getData(question.key, item)">{{item}}</button>
-            </ng-container>
-        </div>
-    </ng-container>
-</div>
-<div>
-    <button (click)="resetGame()">Reset Game</button>
+    <div class="question">
+            <!-- <app-question [question]="question"></app-question> -->
+            <div class="question__botones" *ngFor="let question of questionsType">
+                <h3>{{question.title}}</h3>
+                <div class="question__botones--button">
+                    <ng-container *ngFor="let item of question.questions">
+                        <button (click)="getData(question.key, item)">{{item}}</button>
+                    </ng-container>
+                </div>
+            </div>
+    </div>
+    <button (click)="resetGame()" class="game__reset">Reset Game</button>
 </div>

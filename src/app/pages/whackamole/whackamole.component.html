@@ -1,15 +1,16 @@
-
-<div>
-    <p>Tiempo restante: {{contador}}</p>
-    <p>Puntuación: {{score}}</p>
-    <button (click)="gameStart()">Empezar</button>
-</div>
-
-
-<div class="tablero">
-   <div *ngFor="let fila of filasArray; let i = index" class="fila">
-        <div *ngFor="let column of columnsArray; let j = index" class="col">
-            <img src="{{imageSrc[i][j]}}" alt="" (click)="sumaScore(i,j)">
-        </div>
-   </div>
+<div class="game">
+    <div class="game__info">
+        <p>Tiempo restante: {{contador}}</p>
+        <p>Puntuación: {{score}}</p>
+        <button (click)="gameStart()">Empezar</button>
+    </div>
+    
+    
+    <div class="tablero">
+       <div *ngFor="let fila of filasArray; let i = index" class="fila">
+            <div *ngFor="let column of columnsArray; let j = index" class="col">
+                <img src="{{imageSrc[i][j]}}" alt="" (click)="sumaScore(i,j)" class="image">
+            </div>
+       </div>
+    </div>
 </div>

@@ -1,36 +1,57 @@
-
-.galery{
-    margin: 80px;
-    padding: 15px;
+.game{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    border-radius: 5px;
-    border: 2px solid black;
-
-    img{
-        width: 80px ;
-    }
-}
-
-.question{
-    margin: 100px;
-    padding: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 50px;
-    border-radius: 5px;
-    border: 2px solid black;
-
-        &__botones{
-            display: flex;
-            gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    .galery{
+        width: 80%;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 5px;
+        border: 2px solid black;
+        img{
+            width: 10vw;
+            max-width: 80px ;
         }
-    
-}
+    }
+    .question{
+        width: 80%;
+        padding: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        border-radius: 5px;
+        border: 2px solid black;
+            &__botones{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                &--button{
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 5px;
+                    button{
+                        min-width: 50px;
+                        width: 15vw;
+                        max-width: 80px;
+                    }
+                }
+            }
+    }   
+    &__reset{
+        height: 30px;
+       width: 15vw; 
+       min-width: 50px; 
+       max-width: 100px; 
+       margin-bottom: 10vh;
+    }
 
-.nonTarget{
-    opacity: 0.2;
+    .nonTarget{
+        opacity: 0.2;
+    }
 }

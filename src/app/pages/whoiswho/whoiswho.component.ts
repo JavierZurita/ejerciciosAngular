@@ -597,6 +597,7 @@ export class WhoiswhoComponent implements OnInit {
     if(this.target === person){
       alert("Has Ganado!");
     } else {
+      this.hiddenPersons.push(person);
       alert("Has fallado");
     }
   }

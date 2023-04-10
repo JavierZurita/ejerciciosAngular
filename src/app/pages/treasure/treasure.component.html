@@ -1,19 +1,21 @@
-<div>
-    <label for="filas">Filas</label>
-    <input type="number" id="filas" [(ngModel)]="filas">
-
-    <label for="columns">Columns</label>
-    <input type="number" id="columns" [(ngModel)]="columns">
-
-    <button (click)="pintarTabla($event)" Pintar imagenes>Comenzar</button>
-</div>
-
-<div *ngIf="pintarTabla">
-    <table>
-        <tr *ngFor="let fila of filasArray; let i = index">
-            <td *ngFor="let columnas of columnasArray; let j = index">
-                <img [src]="imageSrc[i][j]" (click)="voltearImagen(i,j)"/>
-            </td>
-        </tr>
-    </table>
+<div class="game">
+    <div class="game__info">
+        <label for="filas" class="game__info--label">Filas
+            <input type="number" id="filas" [(ngModel)]="filas">
+        </label>
+        <label for="columns" class="game__info--label">Columnas
+            <input type="number" id="columns" [(ngModel)]="columns">
+        </label>
+        <button (click)="pintarTabla($event)" class="game__info--button">Comenzar</button>
+    </div>
+    
+    <div *ngIf="pintarTabla" class="game__board">
+        <table class="game__board--table">
+            <tr *ngFor="let fila of filasArray; let i = index">
+                <td *ngFor="let columnas of columnasArray; let j = index">
+                    <img [src]="imageSrc[i][j]" (click)="voltearImagen(i,j)"/>
+                </td>
+            </tr>
+        </table>
+    </div>    
 </div>
